@@ -10,7 +10,8 @@ Summary(pl):	Exception::Class::DBI - obiekty wyj±tków DBI
 Name:		perl-Exception-Class-DBI
 Version:	0.91
 Release:	1
-License:	GPL/Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	4bc75e487b141180961feb12d41bc9d6
