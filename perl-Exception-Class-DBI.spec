@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _with_tests - perform "make test"
+%bcond_with	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	Exception
@@ -16,7 +16,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 # Source0-md5:	4bc75e487b141180961feb12d41bc9d6
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	perl-Module-Build >= 0.20
-%if %{?_with_tests:1}%{!?_with_tests:0}
+%if %{with tests}
 BuildRequires:	perl-DBI >= 1.28
 BuildRequires:	perl-Exception-Class >= 1.02
 BuildRequires:	perl-Test-Simple >= 0.40
@@ -50,7 +50,7 @@ HandleError.
 	installdirs=vendor \
 	destdir=$RPM_BUILD_ROOT
 
-%{?_with_tests:./Build test}
+%{?with_tests:./Build test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
