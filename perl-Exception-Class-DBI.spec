@@ -9,7 +9,7 @@ Summary:	Exception::Class::DBI - DBI Exception objects
 Summary(pl):	Exception::Class::DBI - obiekty wyj±tków DBI
 Name:		perl-Exception-Class-DBI
 Version:	0.90
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -19,7 +19,7 @@ BuildRequires:	perl-DBI >= 1.28
 BuildRequires:	perl-Exception-Class >= 1.02
 BuildRequires:	perl-Test-Simple >= 0.40
 %endif
-BuildRequires:	rpm-perlprov >= 3.0.3-26
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -44,7 +44,8 @@ HandleError.
 %{__perl} -pi -e 's/^(use 5.005)(00;)$/$1_$2/' ./lib/Exception/Class/DBI.pm
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make}
 
 %{?_with_tests:%{__make} test}
@@ -59,6 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%dir %{perl_sitelib}/Exception/Class
-%{perl_sitelib}/Exception/Class/*.pm
+%dir %{perl_vendorlib}/Exception/Class
+%{perl_vendorlib}/Exception/Class/*.pm
 %{_mandir}/man3/*
