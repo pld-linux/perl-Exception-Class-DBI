@@ -8,13 +8,14 @@
 Summary:	Exception::Class::DBI - DBI Exception objects
 Summary(pl):	Exception::Class::DBI - obiekty wyj±tków DBI
 Name:		perl-Exception-Class-DBI
-Version:	0.90
-Release:	2
+Version:	0.91
+Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	a84d3b42d17272615d8081bc0d02dcf3
+# Source0-md5:	4bc75e487b141180961feb12d41bc9d6
 BuildRequires:	perl-devel >= 5.6
+BuildRequires:	perl-Module-Build >= 0.20
 %if %{?_with_tests:1}%{!?_with_tests:0}
 BuildRequires:	perl-DBI >= 1.28
 BuildRequires:	perl-Exception-Class >= 1.02
@@ -37,7 +38,7 @@ Ten modu³ oferuje zestaw specyficznych dla DBI klas wyj±tków.
 Dziedzicz± one z Exception::Class::Base, czyli bazowej klasy dla
 wszystkich obiektów wyj±tków tworzonych przez modu³ Exception::Class.
 Sam Exception::Class::DBI oferuje pojedyncz± metodê klasy - handler(),
-zwracaj±c± referencjê do kodu w³a¶ciw± do przekazywania atrubutu DBI
+zwracaj±c± referencjê do kodu w³a¶ciw± do przekazywania atrybutu DBI
 HandleError.
 
 %prep
@@ -45,16 +46,16 @@ HandleError.
 %{__perl} -pi -e 's/^(use 5.005)(00;)$/$1_$2/' ./lib/Exception/Class/DBI.pm
 
 %build
-%{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
-%{__make}
+%{__perl} Build.PL \
+	installdirs=vendor \
+	destdir=$RPM_BUILD_ROOT
 
-%{?_with_tests:%{__make} test}
+%{?_with_tests:./Build test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+./Build install
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
