@@ -2,13 +2,13 @@
 # Conditional build:
 # _with_tests - perform "make test"
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Exception
-%define	pnam	Class-DBI
+%define		pdir	Exception
+%define		pnam	Class-DBI
 Summary:	Exception::Class::DBI - DBI Exception objects
 Summary(pl):	Exception::Class::DBI - obiekty wyj±tków DBI
 Name:		perl-Exception-Class-DBI
 Version:	0.01
-Release:	1
+Release:	2
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -40,6 +40,7 @@ HandleError.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
+perl -pi -e 's/^(use 5.005)(00;)$/$1_$2/' ./lib/Exception/Class/DBI.pm
 
 %build
 perl Makefile.PL
