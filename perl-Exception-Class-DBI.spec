@@ -3,8 +3,8 @@
 %bcond_with	tests	# perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Exception
-%define	pnam	Class-DBI
+%define		pdir	Exception
+%define		pnam	Class-DBI
 Summary:	Exception::Class::DBI - DBI exception objects
 Summary(pl):	Exception::Class::DBI - obiekty wyj±tków DBI
 Name:		perl-Exception-Class-DBI
