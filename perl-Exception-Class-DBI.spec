@@ -8,7 +8,7 @@
 Summary:	Exception::Class::DBI - DBI Exception objects
 Summary(pl):	Exception::Class::DBI - obiekty wyj±tków DBI
 Name:		perl-Exception-Class-DBI
-Version:	0.02
+Version:	0.90
 Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
