@@ -41,10 +41,10 @@ HandleError.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-perl -pi -e 's/^(use 5.005)(00;)$/$1_$2/' ./lib/Exception/Class/DBI.pm
+%{__perl} -pi -e 's/^(use 5.005)(00;)$/$1_$2/' ./lib/Exception/Class/DBI.pm
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 
 %{?_with_tests:%{__make} test}
