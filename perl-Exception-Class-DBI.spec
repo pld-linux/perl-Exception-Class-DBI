@@ -6,7 +6,7 @@
 %define		pdir	Exception
 %define		pnam	Class-DBI
 Summary:	Exception::Class::DBI - DBI exception objects
-Summary(pl):	Exception::Class::DBI - obiekty wyj±tków DBI
+Summary(pl.UTF-8):   Exception::Class::DBI - obiekty wyjÄ…tkÃ³w DBI
 Name:		perl-Exception-Class-DBI
 Version:	0.92
 Release:	1
@@ -34,12 +34,12 @@ Exception::Class::DBI itself offers a single class method, handler(),
 that returns a code reference appropriate for passing the DBI
 HandleError attribute.
 
-%description -l pl
-Ten modu³ oferuje zestaw specyficznych dla DBI klas wyj±tków.
-Dziedzicz± one z Exception::Class::Base, czyli bazowej klasy dla
-wszystkich obiektów wyj±tków tworzonych przez modu³ Exception::Class.
-Sam Exception::Class::DBI oferuje pojedyncz± metodê klasy - handler(),
-zwracaj±c± referencjê do kodu w³a¶ciw± do przekazywania atrybutu DBI
+%description -l pl.UTF-8
+Ten moduÅ‚ oferuje zestaw specyficznych dla DBI klas wyjÄ…tkÃ³w.
+DziedziczÄ… one z Exception::Class::Base, czyli bazowej klasy dla
+wszystkich obiektÃ³w wyjÄ…tkÃ³w tworzonych przez moduÅ‚ Exception::Class.
+Sam Exception::Class::DBI oferuje pojedynczÄ… metodÄ™ klasy - handler(),
+zwracajÄ…cÄ… referencjÄ™ do kodu wÅ‚aÅ›ciwÄ… do przekazywania atrybutu DBI
 HandleError.
 
 %prep
