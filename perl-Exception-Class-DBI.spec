@@ -6,7 +6,7 @@
 %define		pdir	Exception
 %define		pnam	Class-DBI
 Summary:	Exception::Class::DBI - DBI exception objects
-Summary(pl.UTF-8):   Exception::Class::DBI - obiekty wyjątków DBI
+Summary(pl.UTF-8):	Exception::Class::DBI - obiekty wyjątków DBI
 Name:		perl-Exception-Class-DBI
 Version:	0.92
 Release:	1
