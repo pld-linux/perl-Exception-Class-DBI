@@ -13,8 +13,9 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Exception/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	b6f8731e30956143f337a3fc0881c148
+URL:		http://search.cpan.org/dist/Exception-Class-DBI/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Module-Build >= 0.20
 %if %{with tests}
@@ -55,8 +56,8 @@ HandleError.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-./Build install
 
+./Build install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
