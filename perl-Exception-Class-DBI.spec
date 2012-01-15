@@ -8,13 +8,13 @@
 Summary:	Exception::Class::DBI - DBI exception objects
 Summary(pl.UTF-8):	Exception::Class::DBI - obiekty wyjątków DBI
 Name:		perl-Exception-Class-DBI
-Version:	1.00
+Version:	1.01
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Exception/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	386d6a6627d5d516e053cf6416a93729
+# Source0-md5:	370f8ff528971102a760496866bea0d0
 URL:		http://search.cpan.org/dist/Exception-Class-DBI/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	perl-Module-Build >= 0.20
