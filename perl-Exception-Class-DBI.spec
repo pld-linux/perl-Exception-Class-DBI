@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Exception
 %define		pnam	Class-DBI
 Summary:	Exception::Class::DBI - DBI exception objects
